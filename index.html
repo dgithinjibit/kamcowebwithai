@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kamwenja TTC – Quality Our Quest</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <img src="https://kamwenjattc.ac.ke/wp-content/uploads/2024/09/Logo-291x260-removebg-preview.png" alt="Kamwenja TTC Logo" class="logo">
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Academics</a>
+            <a href="#">Management</a>
+            <a href="#">News</a>
+            <a href="#">Admissions Letters</a>
+            <a href="#">Downloads</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="elementor-background-slideshow">
+            <div class="hero-text">
+                <h1>Kamwenja Teachers' College</h1>
+                <p>QUALITY OUR QUEST</p>
+                <a href="#" class="view-programs-btn">View Our Programs <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="welcome-message">
+            <div class="principal-section">
+                <img id="chief-principal-image" 
+                     src="https://kamwenjattc.ac.ke/wp-content/uploads/2024/08/chief-principal.jpg" 
+                     alt="Chief Principal Wycliffe Wafula" 
+                     class="zoom-out-on-hover chief-principal-img">
+                <div class="principal-greeting">
+                    <h2>Excellence in Teacher Training</h2>
+                    <h3>Welcome from the Chief Principal</h3>
+                    <p>
+                        At Kamwenja Teachers' College, we've been a centre of excellence in teacher education since 1924. 
+                        Our mission is simple: to provide quality training that blends academic rigor, creativity, innovation, and strong moral values.
+                    </p>
+                    <p>
+                        We are proud of our tradition, our dedicated staff, and our vibrant student community. 
+                        Here, learning extends beyond the classroom, with opportunities in sports, clubs, and service to help every student grow as a well-rounded professional.
+                    </p>
+                    <p>
+                        We invite you to explore our programs, connect with our community, and see how we're shaping the future of education.
+                    </p>
+                    <p>
+                        <strong>Mr. Wycliffe Wafula</strong><br>
+                        Chief Principal / Secretary B.O.M
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Links with Aerial Image Hover -->
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <p class="section-description">Jump straight to important sections of our site:</p>
+            <div class="quick-links-grid">
+                <div class="quick-link-card campus__life--single--description">
+                    <div class="quick-link-content">
+                        <h3>Our Programs</h3>
+                        <p>Explore the courses and teacher training we offer.</p>
+                    </div>
+                </div>
+                <div class="quick-link-card campus__life--single--description">
+                    <div class="quick-link-content">
+                        <h3>News & Announcements</h3>
+                        <p>Stay updated on the latest events.</p>
+                    </div>
+                </div>
+                <div class="quick-link-card campus__life--single--description">
+                    <div class="quick-link-content">
+                        <h3>About Us</h3>
+                        <p>Learn More about our college.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Button & Panel -->
+    <div class="chatbot-btn" id="chatbotBtn">
+        <i class="fas fa-robot"></i>
+    </div>
+
+    <div class="chatbot-panel" id="chatbotPanel">
+        <div class="chatbot-header">
+            <span><i class="fas fa-robot"></i> Kamwenja AI Assistant</span>
+            <span class="chatbot-close" id="chatbotClose">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotMessages">
+            <div class="chatbot-message bot">
+                <div class="typing-indicator">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Ask about fees, courses, admission...">
+            <button id="chatbotSend"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div class="chatbot-status">
+            <i class="fas fa-circle status-indicator"></i> <span>Online</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
