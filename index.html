@@ -104,10 +104,8 @@
             <span class="chatbot-close" id="chatbotClose">&times;</span>
         </div>
         <div class="chatbot-body" id="chatbotMessages">
-            <div class="chatbot-message bot">
-                <div class="typing-indicator">
-                    <span></span><span></span><span></span>
-                </div>
+            <div class="chatbot-message bot typing-indicator">
+                <span></span><span></span><span></span>
             </div>
         </div>
         <div class="chatbot-input">
@@ -120,32 +118,5 @@
     </div>
 
     <script src="script.js"></script>
-
-    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-<df-messenger
-  project-id="unstackedlabs"
-  agent-id="c8b4d52f-c1c2-48b2-ba48-0c75ca7ab602"
-  language-code="en"
-  max-query-length="-1">
-  <df-messenger-chat
-    chat-title="Kamwenja">
-  </df-messenger-chat>
-</df-messenger>
-<style>
-  df-messenger {
-    z-index: 999;
-    position: fixed;
-    --df-messenger-font-color: #000;
-    --df-messenger-font-family: Google Sans;
-    --df-messenger-chat-background: #f3f6fc;
-    --df-messenger-message-user-background: #d3e3fd;
-    --df-messenger-message-bot-background: #fff;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    width: 350px;
-  }
-</style>
 </body>
 </html>
