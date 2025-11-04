@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Send message
     function sendMessage() {
-        const question = chatbotInput.value.trim().toLowerCase();
+        const question = chatbotInput.value.trim();
         if (!question) return;
 
         addMessage(question, 'user');
@@ -57,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Smart Response Logic
     function getResponse(input) {
+        const lower = input.toLowerCase();
+
         const fees = "First Year: KES 55,000 per term\nSecond Year: KES 50,000\nThird Year: KES 48,000\nBoarding (Optional): KES 15,000\nPayment: KCB Bank (Acct: 123456789) or M-Pesa Paybill 987654";
 
         const courses = "We offer:\n• Diploma in Primary Teacher Education (3 years)\n• Diploma in Early Childhood Education (3 years)\n• Certificate to Diploma Upgrade (1 year)";
@@ -67,24 +69,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const dates = "Important Dates:\n• Application Deadline: July 31\n• Admission Letters: August 15\n• Reporting Date: September 5";
 
-        if (input.includes('fee') || input.includes('cost') || input.includes('payment')) return fees;
-        if (input.includes('course') || input.includes('program') || input.includes('study')) return courses;
-        if (input.includes('admission') || input.includes('apply') || input.includes('requirement')) return admission;
-        if (input.includes('location') || input.includes('where')) return location;
-        if (input.includes('date') || input.includes('deadline') || input.includes('when')) return dates;
-        if (input.includes('hello') || input.includes('hi')) return "Hello! How can I help you today?";
-        if (input.includes('thank')) return "You're welcome! Need help with anything else?";
+        if (lower.includes('fee') || lower.includes('cost') || lower.includes('payment')) return fees;
+        if (lower.includes('course') || lower.includes('program') || lower.includes('study')) return courses;
+        if (lower.includes('admission') || lower.includes('apply') || lower.includes('requirement')) return admission;
+        if (lower.includes('location') || lower.includes('where')) return location;
+        if (lower.includes('date') || lower.includes('deadline') || lower.includes('when')) return dates;
+        if (lower.includes('hello') || lower.includes('hi')) return "Hello! How can I help you today?";
+        if (lower.includes('thank')) return "You're welcome! Need help with anything else?";
         
         return "I don't have that info. Please contact the admissions office at +254 726 238 121.";
     }
 
     // Event Listeners
     chatbotSend.addEventListener('click', sendMessage);
-    chatbotInput.addEventListener('keypress', e => e.key === 'Enter' && sendMessage());
+    chatbotInput.addEventListener('keypress', e => {
+        if (e.key === 'Enter') sendMessage();
+    });
 
     // Close chat when clicking outside
     document.addEventListener('click', e => {
-        if (!chatbotPanel.contains(e.target) && e.target !== chatbotBtn && !chatbotBtn.contains(e.target)) {
+        if (!chatbotPanel.contains(e.target) && 
+            e.target !== chatbotBtn && 
+            !chatbotBtn.contains(e.target)) {
             chatbotPanel.style.display = 'none';
         }
     });
