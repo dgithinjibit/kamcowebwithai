@@ -265,17 +265,20 @@ body {
     border-radius: 18px;
     align-self: flex-start;
     background: var(--gray);
+    color: var(--dark);
 }
 
-.user {
+.chatbot-message.user {
     align-self: flex-end;
     background: var(--success);
+    color: var(--dark);
 }
 
 .typing-indicator {
     display: flex;
     gap: 4px;
     padding: 5px 0;
+    align-self: flex-start;
 }
 
 .typing-indicator span {
@@ -322,17 +325,23 @@ body {
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .chatbot-status {
     padding: 5px 15px;
     font-size: 12px;
     color: #666;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .status-indicator {
     font-size: 8px;
-    color: #4CAF50;
 }
 
 /* Responsive */
@@ -342,4 +351,11 @@ body {
     }
     .hero-text h1 { font-size: 32px; }
     .chatbot-panel { width: 300px; }
+    .chatbot-btn, .chatbot-panel {
+        left: 15px;
+        bottom: 20px;
+    }
+    .chatbot-panel {
+        bottom: 80px;
+    }
 }
